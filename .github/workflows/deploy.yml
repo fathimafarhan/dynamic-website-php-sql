@@ -17,7 +17,7 @@ jobs:
       - name: Deploy to EC2
         run: |
           ssh -o StrictHostKeyChecking=no -i private_key.pem ubuntu@3.141.19.165 << 'EOF'
-            cd /var/www/htmldynamic-website-php-sql/  # Change to your project directory
+            cd /var/www/html/dynamic-website-php-sql/  # Change to your project directory
             git pull origin master
             sudo systemctl restart nginx
             sudo systemctl restart php8.1-fpm
