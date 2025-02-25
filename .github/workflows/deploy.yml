@@ -20,6 +20,7 @@ jobs:
             cd /var/www/html/dynamic-website-php-sql/  # Change to your project directory
             git pull origin master
             sudo systemctl restart nginx
+            echo "restarted Nginx"
             sudo systemctl restart php8.1-fpm
             exit
           EOF
